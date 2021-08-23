@@ -1,0 +1,24 @@
+@mixin bordered($width) {
+  border: $width solid rgb(196, 192, 192);
+  &:hover {
+    border-color: rgb(255, 159, 159);
+  }
+}
+.marlig {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.header,
+.converter,
+.background {
+  @extend .marlig;
+}
+h4 {
+  @extend .marlig;
+  @include bordered(2px);
+  background-color: sandybrown;
+}
+.background {
+  margin-top: 50px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Welcome to Temperature Converter</h1>
+      <p id="date"></p>
+      <script>
+        document.getElementById("date").innerHTML = Date();
+      </script>
+
+      <img src="https://c.tenor.com/PiF4WW_91GcAAAAC/simpsons-ah-its-too-hot-today.gif" height="200" width="300" alt="" />
+    </div>
+
+    <!-- Converter UI -->
+    <div class="converter">
+      <h4>Select the converter units</h4>
+      <select id="inputTemp">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="reamur">Reamur</option>
+      </select>
+      <span>to</span>
+      <select id="resultTemp">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="reamur">Reamur</option>
+      </select>
+      <h4>Input the number</h4>
+      <input type="number" name="Input" id="input"/>
+      <span>=</span>
+      <input type="number" name="Result" id="result" />
+    </div>
+
+    <!-- Change BG color UI -->
+    <div class="background"><p></p><i>Change Background Color</i></p><input class="input-lg" id="color" />&emsp;<button type="button" class="btn btn-primary" onclick="change()">Change</button></div>
+    
+    <!-- Change BG color script -->
+    <script>
+    function change() {
+      document.body.style.backgroundColor = document.getElementById("color").value;
+    }</script>
+
+    <!-- Converter script -->
+    <script type="module"  src="script.js"></script>
+  
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  </body>
+</html>
